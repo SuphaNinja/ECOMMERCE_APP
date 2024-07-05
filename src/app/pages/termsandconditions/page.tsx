@@ -1,9 +1,6 @@
 import Footer from "@/app/MainComponents/Footer";
 import NavBar from "@/app/MainComponents/navbar/NavBar";
 
-
-
-
 export default function Page () {
     return (
         <div className="w-full">
@@ -25,13 +22,13 @@ export default function Page () {
                 <div className="flex flex-col">
                     <h3 className="text-xl font-semibold">Trademark::</h3>
                     <p className="text-pretty text-base">
-                        The trademarks, logos and service marks displayed on the Website ("Marks") are the property of ElectroBuy.Co. You are not permitted to use the Marks without the prior consent of ElectroBuy.Co.
+                        The trademarks, logos and service marks displayed on the Website (Marks) are the property of ElectroBuy.Co. You are not permitted to use the Marks without the prior consent of ElectroBuy.Co.
                     </p>
                 </div>
                 <div className="flex flex-col">
                     <h3 className="text-xl font-semibold">Warranty Disclaimer:</h3>
                     <p className="text-pretty text-base">
-                        The Website, Service, Content, User Content are provided by ElectroBuy on an "As Is" basis without warranty of any kind, express, implied, statutory or without, including the implied warranties of title, Non-Infringement, merchantability or fitness for a particular purpose.. ElectroBuy.Co does not represent or warrant that the functions contained in the site will be uninterrupted or error-free, that the defects will be corrected, or that this site or the server that makes the site available are free of viruses or other harmful components. ElectroBuy.Co does not make any warranties or representations regarding the use of the materials in this site in terms of their correctness, accuracy, adequacy, usefulness, timeliness, reliability or otherwise. Some states do not permit limitations or exclusions on warranties, so the above limitations may not apply to you.
+                        The Website, Service, Content, User Content are provided by ElectroBuy on an As Is basis without warranty of any kind, express, implied, statutory or without, including the implied warranties of title, Non-Infringement, merchantability or fitness for a particular purpose.. ElectroBuy.Co does not represent or warrant that the functions contained in the site will be uninterrupted or error-free, that the defects will be corrected, or that this site or the server that makes the site available are free of viruses or other harmful components. ElectroBuy.Co does not make any warranties or representations regarding the use of the materials in this site in terms of their correctness, accuracy, adequacy, usefulness, timeliness", reliability or otherwise. Some states do not permit limitations or exclusions on warranties, so the above limitations may not apply to you.
                     </p>
                 </div>
                 <div className="flex flex-col">
@@ -67,7 +64,7 @@ export default function Page () {
                 <div className="flex flex-col">
                     <h3 className="text-xl font-semibold">Participation Disclaimer:</h3>
                     <p className="text-pretty text-base">
-                        ElectroBuy.Co does not and cannot review all communications and materials posted to or created by users accessing the site, and is not in any manner responsible for the content of these communications and materials. You acknowledge that by providing you with the ability to view and distribute user-generated content on the site, ElectroBuy.Co is merely acting as a passive conduit for such distribution and is not undertaking any obligation or liability relating to any contents or activities on the site. You agree to indemnify, defend, and hold harmless ElectroBuy.Co, its officers, directors, employees, agents, licensors and suppliers (collectively the "Service Providers") from and against all losses, expenses, damages and costs, including reasonable attorneys" fees, resulting from any violation of these terms and conditions or any activity related to your account (including negligent or wrongful conduct) by you or any other person accessing the site using your Internet account.
+                        ElectroBuy.Co does not and cannot review all communications and materials posted to or created by users accessing the site, and is not in any manner responsible for the content of these communications and materials. You acknowledge that by providing you with the ability to view and distribute user-generated content on the site, ElectroBuy.Co is merely acting as a passive conduit for such distribution and is not undertaking any obligation or liability relating to any contents or activities on the site. You agree to indemnify, defend, and hold harmless ElectroBuy.Co, its officers, directors, employees, agents, licensors and suppliers (collectively the Service Providers) from and against all losses, expenses, damages and costs, including reasonable attorneys fees, resulting from any violation of these terms and conditions or any activity related to your account (including negligent or wrongful conduct) by you or any other person accessing the site using your Internet account.
                     </p>
                 </div>
                 <div className="flex flex-col">
@@ -94,7 +91,7 @@ export default function Page () {
                         All purchases made on the ElectroBuy website are subject to the duties, regulations, and laws of the country of destination and any country through which said purchased product(s) may transit without exception.
                     </p>
                     <p className="text-pretty text-base">
-                        ElectroBuy makes no affirmative representations, promises, or guarantees as to the legality of any product for sale on the ElectroBuy website in the purchaser’s respective country of destination. Any costs, fines or penalties (civil and criminal) which may be imposed by any country or jurisdiction, shall be the exclusive liability of the purchaser of any such product(s) and/or the “Importer of Record” into the “Destination Country” as defined herein.
+                        ElectroBuy makes no affirmative representations, promises, or guarantees as to the legality of any product for sale on the ElectroBuy website in the purchaser&quot;s respective country of destination. Any costs, fines or penalties (civil and criminal) which may be imposed by any country or jurisdiction, shall be the exclusive liability of the purchaser of any such product(s) and/or the “Importer of Record” into the “Destination Country” as defined herein.
                     </p>
                 </div>
                 <div className="flex flex-col">
@@ -162,7 +159,7 @@ export default function Page () {
                         ElectroBuy will not deal or provide any services/products to any of OFAC sanctions countries in accordance with the law of Kuwait.
                     </p>
                     <p className="text-pretty">
-                        ElectroBuy Co W.L.L and/or their affiliates ("ElectroBuy") provide website features, payments solutions, Intellectual property, and other products and services to you when you visit or shop at ElectroBuy international websites (the "website").
+                        ElectroBuy Co W.L.L and/or their affiliates (ElectroBuy) provide website features, payments solutions, Intellectual property, and other products and services to you when you visit or shop at ElectroBuy international websites (the website).
                     </p>
                 </div>
             </div>
