@@ -5,12 +5,18 @@ import FlagWithText from "./aboutComponents/FlagWithText";
 import InfoCard from "./aboutComponents/InfoCard";
 import { ArrowsRightLeftIcon, BriefcaseIcon, CakeIcon, CalendarDaysIcon, ComputerDesktopIcon, CurrencyDollarIcon, DevicePhoneMobileIcon, GlobeAltIcon, HandThumbUpIcon, KeyIcon, LanguageIcon, MagnifyingGlassIcon, PaperAirplaneIcon, PhoneArrowDownLeftIcon, RectangleGroupIcon, ShieldCheckIcon, TruckIcon, WalletIcon, WifiIcon } from "@heroicons/react/24/outline";
 import { BanknotesIcon } from "@heroicons/react/16/solid";
+import { useState } from "react";
 
 export default function Page() {
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    
 
+    const toggleSidebar = () => {
+        setIsSidebarOpen(false);
+    };
     return (
         <div className="max-w-screen">
-            <NavBar />
+            <NavBar toggleSidebar={toggleSidebar}/>
             <div className="w-auto">
                 <TopBanner />
             </div>

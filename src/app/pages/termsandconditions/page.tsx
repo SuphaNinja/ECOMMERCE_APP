@@ -1,10 +1,16 @@
 import Footer from "@/app/MainComponents/Footer";
 import NavBar from "@/app/MainComponents/navbar/NavBar";
+import { useState } from "react";
 
 export default function Page () {
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    const toggleSidebar = () => {
+        setIsSidebarOpen(false);
+    };
     return (
         <div className="w-full">
-            <NavBar/>
+            <NavBar toggleSidebar={toggleSidebar}/>
             <div className="w-4/6 mx-auto mt-8 gap-4 flex flex-col">
                 <h2 className="text-center text-4xl font-semibold">Terms & Conditions</h2>
                 <div className="flex mt-12 flex-col">

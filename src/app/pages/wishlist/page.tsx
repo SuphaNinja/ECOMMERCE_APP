@@ -13,9 +13,13 @@ import RecommendedProducts from "../shoppingcart/CartComponents/RecommendedProdu
 import { useEffect, useRef, useState } from "react";
 import GetWishlistItem from "./wishlistComponents/GetWishlistItem";
 
-
-
 export default function Page() {
+
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    const toggleSidebar = () => {
+        setIsSidebarOpen(false);
+    };
     const scrollRef = useRef<HTMLDivElement>(0);
 
     const scrollLeft = () => {
@@ -58,7 +62,7 @@ export default function Page() {
 
     return (
         <div className="w-full">
-            <NavBar />
+            <NavBar toggleSidebar={toggleSidebar}/>
             <div className="pl-4 w-full border-b-1 py-2 ">
                 <Link href={"/"} className="font-bold text-lg hover:underline">{"< Continue Shopping"}</Link>
             </div>

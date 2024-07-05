@@ -14,6 +14,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "react-toastify";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious,} from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
+import { useState } from "react";
 
 export default function Page() {
     const user = useQuery({
@@ -35,9 +36,15 @@ export default function Page() {
         };
     };
 
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    const toggleSidebar = () => {
+        setIsSidebarOpen(false);
+    };
+
     return (
         <div className="w-full">
-            <NavBar />
+            <NavBar toggleSidebar={toggleSidebar}/>
             <div className="pl-4 w-full border-b mb-2 py-2 ">
                 <Button asChild variant="link">
                     <Link href={"/"}>{"< Continue Shopping"}</Link>

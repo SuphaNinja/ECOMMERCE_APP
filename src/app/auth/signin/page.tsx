@@ -1,4 +1,5 @@
 "use client"
+import {useState} from "react";
 import { Button } from "@/components/ui/button";
 import SignInForm from "./SignInForm";
 import { useSession } from "next-auth/react";
@@ -22,10 +23,15 @@ const SignInPage = ({ searchParams }: Props) => {
         }
         window.location.href = searchParams.callbackUrl || "/";
     };
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    const toggleSidebar = () => {
+        setIsSidebarOpen(false);
+    };
 
     return (
         <div>
-            <NavBar/>
+            <NavBar toggleSidebar={toggleSidebar}/>
             <div className="flex h-screen items-center md:mt-24 flex-col">
                 <p className="text-center "> Dont have an account yet?
                     <Button asChild variant="link">
