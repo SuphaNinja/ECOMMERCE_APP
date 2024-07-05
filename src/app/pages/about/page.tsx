@@ -23,22 +23,22 @@ export default function Page() {
                 <FlagWithText
                     countryCode="GB_ENG"
                     title="United Kingdom"
-                    text="Welcome the elegance of British craftsmanship and style! Our UK store’s product collection has the intricacy and classic charm associated with British brands. Explore the best of British culture with ElectroBuy."
+                    text="Welcome the elegance of British craftsmanship and style! Our UK store&quot;s product collection has the intricacy and classic charm associated with British brands. Explore the best of British culture with ElectroBuy."
                 />
                 <FlagWithText
                     countryCode="CN"
                     title="China"
-                    text="Get the best of innovation with our China store. Travel across a world of technological wonders, fashion-forward designs, and traditional artistry. ElectroBuy's China store provides access to the Chinese brands' dynamic and evolving landscape."
+                    text="Get the best of innovation with our China store. Travel across a world of technological wonders, fashion-forward designs, and traditional artistry. ElectroBuy&quot;s China store provides access to the Chinese brands dynamic and evolving landscape."
                 />
                 <FlagWithText
                     countryCode="KR"
                     title="Korea"
-                    text="Explore the trendsetting world of Korean beauty and technology. ElectroBuy's Korea store brings you the best of Korean creativity, from skincare essentials to the latest gadgets, supplying a glance into the futuristic lifestyle of Korea."
+                    text="Explore the trendsetting world of Korean beauty and technology. ElectroBuy&quot;s Korea store brings you the best of Korean creativity, from skincare essentials to the latest gadgets, supplying a glance into the futuristic lifestyle of Korea."
                 />
                 <FlagWithText
                     countryCode="JP"
                     title="Japan"
-                    text="Experience the perfect mix of tradition and modernity with our Japanese store. From stunning handiwork to advanced tech, ElectroBuy's Japan store brings you the essence of Japanese culture and ingenuity delivered to your doorstep."
+                    text="Experience the perfect mix of tradition and modernity with our Japanese store. From stunning handiwork to advanced tech, ElectroBuy&quot;s Japan store brings you the essence of Japanese culture and ingenuity delivered to your doorstep."
                 />
             </div>
             <hr className="md:w-2/3 w-auto mx-auto" />
@@ -47,14 +47,14 @@ export default function Page() {
                     <div className="flex flex-col">
                         <h2 className="text-3xl text-center mb-4 md:mb-12">Who We Are</h2>
                         <p className="md:w-2/3 text-center md:text-left mx-auto text-lg text-pretty ">
-                            We are your global shopping companions and have been so since our inception in 2012. Today, we've become a cross-border shopping paradise connecting customers in over 180 countries with limitless possibilities. We operate online stores in 180+ countries with products from the US, the UK, China, Japan, Hong Kong, Korea, and Turkey. Some of our primary features include:
+                            We are your global shopping companions and have been so since our inception in 2012. Today, we&quot;ve become a cross-border shopping paradise connecting customers in over 180 countries with limitless possibilities. We operate online stores in 180+ countries with products from the US, the UK, China, Japan, Hong Kong, Korea, and Turkey. Some of our primary features include:
                         </p>
                     </div>
                     <div className="flex flex-col gap-8">
                         <InfoCard
                             icon={<GlobeAltIcon width={50} />}
                             title="Global Presence"
-                            text="We've stamped our mark in 180+ countries and counting, making us your go-to international marketplace."
+                            text="We&quot;ve stamped our mark in 180+ countries and counting, making us your go-to international marketplace."
                         />
                         <InfoCard
                             icon={<WalletIcon width={50} />}
@@ -139,7 +139,7 @@ export default function Page() {
                             <InfoCard
                                 icon={<CurrencyDollarIcon width={50} />}
                                 title="Money Back Guarantee"
-                                text="ElectroBuy offers a 100% money-back guarantee on your purchases to show our confidence. We stand by the quality of our products, and your satisfaction is our priority. If you're unsatisfied with your order, we promise to make it right. This guarantee reflects our commitment to customer satisfaction to let you shop with peace of mind, knowing your investment is protected."
+                                text="ElectroBuy offers a 100% money-back guarantee on your purchases to show our confidence. We stand by the quality of our products, and your satisfaction is our priority. If you&quot;re unsatisfied with your order, we promise to make it right. This guarantee reflects our commitment to customer satisfaction to let you shop with peace of mind, knowing your investment is protected."
                             />
                         </div>
                     </div>
