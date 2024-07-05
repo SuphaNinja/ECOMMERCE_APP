@@ -20,7 +20,7 @@ export default function Page() {
     const toggleSidebar = () => {
         setIsSidebarOpen(false);
     };
-    const scrollRef = useRef<HTMLDivElement>(0);
+    const scrollRef = useRef<HTMLDivElement>(null);
 
     const scrollLeft = () => {
         if (scrollRef.current) {
