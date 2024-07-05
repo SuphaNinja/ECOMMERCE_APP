@@ -1,3 +1,4 @@
+"use client"
 import Footer from "@/app/MainComponents/Footer";
 import NavBar from "@/app/MainComponents/navbar/NavBar";
 import TopBanner from "./aboutComponents/TopBanner";

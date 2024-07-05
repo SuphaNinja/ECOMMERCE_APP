@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import SignUpForm from "./SignUpForm";
 import NavBar from "@/app/MainComponents/navbar/NavBar";
