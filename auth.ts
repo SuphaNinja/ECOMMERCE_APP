@@ -17,7 +17,7 @@ const credentialsConfig = CredentialsProvider({
         password: { label: "Password", type: "password" },
     },
 
-    async authorize(credentials, req) {
+    async authorize(credentials:any, req:any) {
         const InputUserName = credentials.userName as string;
         const InputPassword = credentials.password as string;
         const user = await prisma.user.findUnique({
@@ -34,7 +34,7 @@ const credentialsConfig = CredentialsProvider({
        if(!isPasswordCorrect) throw new Error("Email or password is incorrect.");
 
        const { password, ...userWithoutPass } = user;
-       return userWithoutPass ;
+       return userWithoutPass;
     }
 });
 
