@@ -27,7 +27,7 @@ export default function NavBar({ toggleSidebar }: { toggleSidebar: () => void })
             <div className="flex md:mb-0 mb-2 justify-evenly items-center w-full sm:w-auto">
                 <ToggleTheme />
                 <Button asChild variant="link" className="text-2xl font-bold font-serif">
-                    <Link href={process.env.NEXT_PUBLIC_URL + "/"} >ElectroBuy</Link>
+                    <Link href={"/"} >ElectroBuy</Link>
                 </Button>
                 <Button variant="link" onClick={toggleSidebar} className="lg:hidden">
                     <Bars3Icon className="w-6 h-6" />
