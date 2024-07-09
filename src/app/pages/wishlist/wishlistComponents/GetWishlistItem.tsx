@@ -71,13 +71,13 @@ export default function GetWishlistItem({ itemId, quantity }: any) {
         <div>
             {!product.isLoading && (
                 <div className="grid max-h-[300px] w-full grid-cols-6 p-8 gap-4">
-                    <Link href={process.env.NEXT_PUBLIC_URL + "/productpage/" + product.data?.id}>
+                    <Link href={"/productpage/" + product.data?.id}>
                         <div className="h-full col-span-1">
                             <img src={product.data?.thumbnail} alt="product image" className="w-24 h-24 hover:brightness-75 transition-all rounded-md object-cover" />
                         </div>
                     </Link>
                     <div className="h-full flex flex-col justify-between col-span-4">
-                        <Link href={process.env.NEXT_PUBLIC_URL + "/productpage/" + product.data?.id}>
+                        <Link href={"/productpage/" + product.data?.id}>
                             <h3 className="text-xl hover:underline transition-all font-bold">{product.data?.brand}</h3>
                             <p className="text-xl hover:underline transition-all font-semibold">{product.data?.title}</p>
                         </Link>

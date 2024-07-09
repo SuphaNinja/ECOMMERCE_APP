@@ -60,7 +60,7 @@ const RecommendedProducts = ({ product }: any) => {
                     <p className='text-center first-letter:uppercase text-lg font-semibold'>{product.title}</p>
                 </div>
                 <Button asChild>
-                    <Link href={process.env.NEXT_PUBLIC_URL + "/productpage/" + product.id}>View Product</Link>
+                    <Link href={"/productpage/" + product.id}>View Product</Link>
                 </Button>
             </CardContent>
         </Card>

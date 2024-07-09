@@ -64,12 +64,12 @@ export default function NavBar({ toggleSidebar }: { toggleSidebar: () => void })
                     Explore &#x2193;
                 </Button>
                 {user.data ?
-                    <Link href={process.env.NEXT_PUBLIC_URL + "/pages/shoppingcart"} className="flex items-center">
+                    <Link href={"/pages/shoppingcart"} className="flex items-center">
                         <ShoppingCartIcon width={25} />
                         <span>({user.isSuccess && user.data.carts.length})</span>
                     </Link>
                     :
-                    <Link href={process.env.NEXT_PUBLIC_URL + "/pages/shoppingcart"} className="flex items-center">
+                    <Link href={"/pages/shoppingcart"} className="flex items-center">
                         <ShoppingCartIcon width={25} />
                     </Link>
                 }

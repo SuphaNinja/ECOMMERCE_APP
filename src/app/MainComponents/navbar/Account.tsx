@@ -23,7 +23,7 @@ export default function Account({ signOut }: any) {
                         <Link href="#"><MapPinIcon width={20} />Track an order</Link>
                     </Button>
                     <Button asChild variant="link">
-                        <Link href={process.env.NEXT_PUBLIC_URL + "/pages/wishlist"}><HeartIcon width={20} />Wishlist</Link>
+                        <Link href={"/pages/wishlist"}><HeartIcon width={20} />Wishlist</Link>
                     </Button>
                     <Button variant="link" onClick={signOut}>Sign out</Button>
                 </div>
