@@ -19,11 +19,10 @@ export default function NavBar({ toggleSidebar }: { toggleSidebar: () => void })
         queryFn: () => api.getCurrentUser(),
     });
 
-    const [showExplore, setShowExplore] = useState(false);
     const [showAccount, setShowAccount] = useState(false);
 
     return (
-        <header className="flex max-w-screen bg-background items-center justify-between border-b shadow-xl py-4 md:pr-6 md:px-12 sm:flex-row flex-col">
+        <header className="flex max-w-screen bg-background items-center justify-evenly border-b shadow-xl py-4 md:pr-6 md:px-12 sm:flex-row flex-col">
             <div className="flex md:mb-0 mb-2 justify-evenly items-center w-full sm:w-auto">
                 <ToggleTheme />
                 <Button asChild variant="link" className="text-2xl font-bold font-serif">
@@ -31,20 +30,6 @@ export default function NavBar({ toggleSidebar }: { toggleSidebar: () => void })
                 </Button>
                 <Button variant="link" onClick={toggleSidebar} className="lg:hidden">
                     <Bars3Icon className="w-6 h-6" />
-                </Button>
-            </div>
-            <Button 
-                variant="link"
-                onClick={() => setShowExplore(!showExplore)} 
-                className="hidden md:block">
-                Explore &#x2193;
-            </Button>
-            {showExplore && <Explore />}
-            <div className="flex rounded-full border mx-auto px-2 w-full sm:w-1/3 items-center ">
-                <Button variant="link" className="w-1/12">All &#x2193;</Button>
-                <Input type="text" placeholder="Search"/>
-                <Button variant="link" className="">
-                    <MagnifyingGlassIcon className="" width={25}/>
                 </Button>
             </div>
             <div className="flex items-center gap-6">
@@ -57,12 +42,6 @@ export default function NavBar({ toggleSidebar }: { toggleSidebar: () => void })
                     </Button>
                     {showAccount && <Account signOut={() => signOut()} />}
                 </div>
-                <Button
-                    variant="link"
-                    onClick={() => setShowExplore(!showExplore)}
-                    className="md:hidden block">
-                    Explore &#x2193;
-                </Button>
                 {user.data ?
                     <Link href={"/pages/shoppingcart"} className="flex items-center">
                         <ShoppingCartIcon width={25} />
