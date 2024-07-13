@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import api from "@/lib/axios";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { redirect } from 'next/navigation'
 
 const ProductCard = ({ product }: any) => {
     const queryClient = useQueryClient();
@@ -51,6 +52,7 @@ const ProductCard = ({ product }: any) => {
 
     const handleAddToCart = () => {
         addToCart.mutate();
+        
         if (!toast.isActive(product.id as string)) {
             toast.success("Product added to cart!", {
                 toastId: product.id as string
@@ -60,6 +62,10 @@ const ProductCard = ({ product }: any) => {
 
     const handleAddToWishlist = () => {
         addToWishlist.mutate();
+        if (!user.data) {
+            redirect("/login")
+        }
+
         if (itemIsInWishlist === false) {
             if (!toast.isActive(product.id)) {
                 toast.success("Product added to wishlist!", {toastId: product.id})
@@ -105,13 +111,19 @@ const ProductCard = ({ product }: any) => {
                             {product.brand}
                         </Link>
                     </Button>
-                    <Button variant="link" onClick={handleAddToWishlist}>
-                        {itemIsInWishlist ? (
-                            <HeartIcon color="red" fill="red" width={25} />
-                        ) : (
-                            <HeartIcon width={25} />
-                        )}
-                    </Button>
+                    {user.data ? (
+                        <Button variant="link" onClick={handleAddToWishlist}>
+                            {itemIsInWishlist ? (
+                                <HeartIcon color="red" fill="red" width={25} />
+                            ) : (
+                                <HeartIcon width={25} />
+                            )}
+                        </Button>
+                    ): (
+                        <Button asChild variant="link">
+                            <Link href="/auth/signin"><HeartIcon width={25} /></Link>
+                        </Button>
+                    )}
                 </div>
                 <Button asChild variant="link" className="mr-auto text-md">
                     <Link
@@ -128,7 +140,13 @@ const ProductCard = ({ product }: any) => {
                     <p className="text-sm">In stock: {product.stock}pcs</p>
                 </div>
                 <div className="flex justify-between items-center mt-4">
-                    <Button onClick={handleAddToCart} size="sm">Add to cart</Button>
+                    {user.data ? (
+                        <Button onClick={handleAddToCart} size="sm">Add to cart</Button>
+                    ) : (
+                        <Button asChild >
+                            <Link href="/auth/signin">Add to cart</Link>
+                        </Button>
+                    )}
                     <Button asChild size="sm">
                         <Link href={`/productpage/${product.id}`}>View product</Link>
                     </Button>
