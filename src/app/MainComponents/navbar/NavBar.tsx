@@ -1,9 +1,8 @@
 "use client";
 
-import { MagnifyingGlassIcon, UserIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import {  UserIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
-import Explore from "./Explore";
 import Account from "./Account";
 import { signOut } from "next-auth/react";
 import Link from "next/link";
@@ -11,7 +10,7 @@ import { useQuery } from "@tanstack/react-query";
 import api from "@/lib/axios";
 import { ToggleTheme } from "@/components/ui/ToggleTheme";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+
 
 export default function NavBar({ toggleSidebar }: { toggleSidebar: () => void }) {
     const user = useQuery({
