@@ -19,7 +19,6 @@ export default function NavBar({ toggleSidebar }: { toggleSidebar: () => void })
     });
 
     const [showAccount, setShowAccount] = useState(false);
-
     return (
         <header className="flex max-w-screen bg-background items-center justify-evenly border-b shadow-xl py-4 md:pr-6 md:px-12 sm:flex-row flex-col">
             <div className="flex md:mb-0 mb-2 justify-evenly items-center w-full sm:w-auto">
