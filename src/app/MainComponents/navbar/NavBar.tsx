@@ -31,7 +31,7 @@ export default function NavBar({ toggleSidebar }: { toggleSidebar: () => void })
                 </Button>
             </div>
             <div className="flex items-center gap-6">
-                <div className="relative">
+                <div className="relative flex">
                     <Button variant={"link"} className="mr-4" asChild><Link href={"/pages/about"}>About us</Link></Button>
                     <Button 
                         variant="link"
