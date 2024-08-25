@@ -32,6 +32,7 @@ export default function NavBar({ toggleSidebar }: { toggleSidebar: () => void })
             </div>
             <div className="flex items-center gap-6">
                 <div className="relative">
+                    <Button variant={"link"} className="mr-4" asChild><Link href={"/pages/about"}>About us</Link></Button>
                     <Button 
                         variant="link"
                         onClick={() => setShowAccount(!showAccount)} 
