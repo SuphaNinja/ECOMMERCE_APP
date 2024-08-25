@@ -12,6 +12,7 @@ import { CheckIcon } from "@heroicons/react/20/solid";
 import { toast } from "react-toastify";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 
 
@@ -142,9 +143,17 @@ export default function ProductPage() {
                                         <img src={product.data.images[imageIndex]} className={`w-full sm:border max-h-[350px] sm:p-8 sm:rounded-xl object-cover ${transitioning && 'transition-opacity duration-300 opacity-0'}`} />
                                     </div>
                                     <div className="flex items-center border-b pb-4 justify-evenly sm:gap-12 mt-6 sm:mt-12 w-full">
-                                        <Button onClick={handleAddToCart}>
-                                            <ShoppingCartIcon width={25} />Add To Cart!
-                                        </Button>
+                                        {user.data ? (
+                                            <Button onClick={handleAddToCart}>
+                                                <ShoppingCartIcon width={25} />Add To Cart!
+                                            </Button>
+                                        ):(
+                                            <Button asChild>
+                                                <Link href={"/auth/signin"}>
+                                                    <ShoppingCartIcon width={25} />Add To Cart!
+                                                </Link>
+                                            </Button>
+                                        )}
                                         <Button variant="link" onClick={handleAddToWishlist}>
                                             {itemIsInWishlist ? <HeartIcon color="red" fill="red" width={30} /> : <HeartIcon width={30} />}
                                         </Button>
